@@ -47,6 +47,7 @@ TARGET_KERNEL_SOURCE := kernel/bq/msm8976
 
 # HIDL
 DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/manifest.xml
+TARGET_FS_CONFIG_GEN += $(LOCAL_PATH)/config.fs
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := Aquaris_X5_Plus,gohan
