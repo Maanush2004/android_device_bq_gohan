@@ -701,10 +701,6 @@ service gx_fpd /system/bin/gx_fpd
     group system
     seclabel u:r:gx_fpd:s0
 
-service fingerprintd /system/bin/fingerprintd
-    class late_start
-    user system
-
 #start camera server as daemon
 service qcamerasvr /system/bin/mm-qcamera-daemon
    class late_start

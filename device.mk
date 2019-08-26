@@ -64,6 +64,8 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_PACKAGES += \
+    android.hardware.audio@2.0-impl \
+    android.hardware.audio.effect@2.0-impl \
     audiod \
     audio.a2dp.default \
     audio.primary.msm8952 \
@@ -92,9 +94,19 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_platform_info_extcodec.xml:system/etc/audio_platform_info_extcodec.xml \
     $(LOCAL_PATH)/audio/mixer_paths_qrd_skun.xml:system/etc/mixer_paths_qrd_skun.xml
 
+# Bluetooth
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0-impl
+
 # Camera
 PRODUCT_PACKAGES += \
+    android.hardware.camera.provider@2.4-impl \
+    camera.device@1.0-impl \
     Snap
+
+# Configstore
+PRODUCT_PACKAGES += \
+    android.hardware.configstore@1.0-service
 
 # Connectivity Engine support (CNE)
 PRODUCT_PACKAGES += \
@@ -102,15 +114,23 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
+    android.hardware.graphics.allocator@2.0-impl \
+    android.hardware.graphics.composer@2.1-impl \
+    android.hardware.graphics.mapper@2.0-impl \
+    android.hardware.memtrack@1.0-impl \
     copybit.msm8952 \
     gralloc.msm8952 \
     hwcomposer.msm8952 \
     liboverlay \
     memtrack.msm8952
 
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.0-impl
+
 # Fingerprint
 PRODUCT_PACKAGES += \
-    fingerprintd
+    android.hardware.biometrics.fingerprint@2.1-service
 
 # For android_filesystem_config.h
 PRODUCT_PACKAGES += \
@@ -123,6 +143,7 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
+    android.hardware.gnss@1.0-impl \
     gps.msm8952
 
 PRODUCT_PACKAGES += \
@@ -153,10 +174,12 @@ PRODUCT_COPY_FILES += \
 
 # Keymaster
 PRODUCT_PACKAGES += \
+    android.hardware.keymaster@3.0-impl \
     keystore.msm8952
 
 # Lights
 PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-impl \
     lights.msm8952
 
 # Media
@@ -172,6 +195,7 @@ PRODUCT_COPY_FILES += \
 
 # NFC packages
 PRODUCT_PACKAGES += \
+    android.hardware.nfc@1.0-impl \
     NfcNci \
     Tag \
     nfc_nci.pn54x.default
@@ -199,6 +223,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
+    android.hardware.power@1.0-impl \
     power.msm8952
 
 # Qualcomm dependencies
@@ -224,9 +249,20 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:system/etc/sensors/hals.conf \
     $(LOCAL_PATH)/configs/sensors/sensor_def_qcomdev.conf:system/etc/sensors/sensor_def_qcomdev.conf
 
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@1.0-impl
+
+# USB
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0-service
+	
+# Vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator@1.0-impl
 
 # Wifi
 PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0-service \
     hostapd_default.conf \
     hostapd \
     wpa_supplicant \
