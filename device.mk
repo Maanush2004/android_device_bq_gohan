@@ -160,7 +160,8 @@ PRODUCT_PACKAGES += \
 # IPACM
 PRODUCT_PACKAGES += \
     IPACM_cfg.xml \
-    ipacm
+    ipacm \
+    liboffloadhal
 
 # IRQ
 PRODUCT_COPY_FILES += \
